@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+    <!DOCTYPE HTML>
+    <html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Formulario</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/responsive.css">
+        <link rel="icon" href="image/fevicon.png" type="image/gif" />  
+        <link rel="icon" href="./image/logo_mini.png" sizes="32x32" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <style>
+            .custom-image {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;  
+                max-width: 100%;
+                flex: 1;  
+            }
+    
+            .img-fluid {    
+                height: 100%;
+                max-width: 100%;
+                border-radius: 20px;
+                border: solid 2px #8fd400; 
+            }
+    
+            .numbersTable {
+                margin-top: 20px; 
+            }
+     
+            .bigNumberDisplay {
+                font-size: 4rem;
+                font-weight: bold;
+                margin-top: 20px;
+            }
+    
+            .navbar-brand img {
+                max-height: 50px;
+            }
+     
+            .table-container {
+                display: flex;
+                justify-content: center; 
+                align-items: center; 
+                height: 100%; 
+                position: relative; 
+            }
+    
+            .table {
+                width: 700px; 
+                height: 700px; 
+                border: 2px solid #8fd400; 
+                border-radius: 10px; 
+                overflow: hidden; 
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+                position: relative; 
+                z-index: 1; 
+            }
+    
+            .table th {
+                background-color: #f8f9fa; 
+                color: #333; 
+                font-weight: bold; 
+                padding: 15px; 
+            }
+    
+            .table td {
+                background-color: #fff; 
+                color: #555; 
+                padding: 0; 
+                width: 10%; 
+                height: 10%; 
+                transition: background-color 0.3s; 
+            }
+    
+            .table td:hover {
+                background-color: #e9ecef; 
+            }
+    
+            .image-wrapper {
+                position: absolute; 
+                top: 43%;  /* Ajusta esta propiedad para subir las imágenes */
+                transform: translateY(-50%); 
+                width: 400px; 
+                z-index: 0; 
+            }
+    
+            .image-wrapper.left {
+                left: -300px; /* Acercar a la tabla */
+            }
+    
+            .image-wrapper.right {
+                right: -300px; /* Acercar a la tabla */
+            }
+        </style>
+    </head>
+<body>
+    <div class="loader_bg" style="display: none;">
+        <div class="loader"></div>
+    </div>    
+    <header>
+        <div class="header">
+            <div class="container">
+                <nav class="navbar navbar-expand-md navbar-dark">
+                    <a class="navbar-brand" href="#">
+                        <img src="image/logo.png" alt="Logo" class="logo-img" />
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="#inicio" onclick="hideNavbar()">INICIO</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="" onclick="hideNavbar()">excel</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <a class="navbar-brand" href="#">
+                        <img src="image/logopromo.png" alt="Logo" class="logo-img" />
+                    </a>
+                </nav>  
+            </div>
+        </div>  
+    </header>
+    <br><br><br><br>
+
+    <table>
+        <tr>
+            <td>
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </td>
+            <td>
+                <label for="nombre">Apellidos:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </td>
+        </tr>
+    </table>
+    <!-- <table>
+        <td>
+            <div class="container">
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <select id="pais" name="pais" required>
+                            <option value="" disabled selected>Selecciona tu país</option>
+                            <option value="peru">Perú</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecciona tu género</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+                </form>
+            </div>
+        </td>
+        <td>
+            <div class="container">
+                <form id="registroForm">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Correo Electrónico:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="telefono">Teléfono:</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="pais">País:</label>
+                        <select id="pais" name="pais" required>
+                            <option value="" disabled selected>Selecciona tu país</option>
+                            <option value="peru">Perú</option>
+                            <option value="chile">Chile</option>
+                            <option value="argentina">Argentina</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="genero">Género:</label>
+                        <select id="genero" name="genero" required>
+                            <option value="" disabled selected>Selecciona tu género</option>
+                            <option value="masculino">Masculino</option>
+                            <option value="femenino">Femenino</option>
+                            <option value="otro">Otro</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="mensaje">Mensaje:</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </td>
+    </table> -->
+    <script src="js/script.js"></script>
+</body>
+</html>
