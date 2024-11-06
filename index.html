@@ -12,92 +12,6 @@
         <link rel="icon" href="./image/logo_mini.png" sizes="32x32" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-        <style>
-            .custom-image {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                padding: 20px;  
-                max-width: 100%;
-                flex: 1;  
-            }
-    
-            .img-fluid {    
-                height: 100%;
-                max-width: 100%;
-                border-radius: 20px;
-                border: solid 2px #8fd400; 
-            }
-    
-            .numbersTable {
-                margin-top: 20px; 
-            }
-     
-            .bigNumberDisplay {
-                font-size: 4rem;
-                font-weight: bold;
-                margin-top: 20px;
-            }
-    
-            .navbar-brand img {
-                max-height: 50px;
-            }
-     
-            .table-container {
-                display: flex;
-                justify-content: center; 
-                align-items: center; 
-                height: 100%; 
-                position: relative; 
-            }
-    
-            .table {
-                width: 700px; 
-                height: 700px; 
-                border: 2px solid #8fd400; 
-                border-radius: 10px; 
-                overflow: hidden; 
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-                position: relative; 
-                z-index: 1; 
-            }
-    
-            .table th {
-                background-color: #f8f9fa; 
-                color: #333; 
-                font-weight: bold; 
-                padding: 15px; 
-            }
-    
-            .table td {
-                background-color: #fff; 
-                color: #555; 
-                padding: 0; 
-                width: 10%; 
-                height: 10%; 
-                transition: background-color 0.3s; 
-            }
-    
-            .table td:hover {
-                background-color: #e9ecef; 
-            }
-    
-            .image-wrapper {
-                position: absolute; 
-                top: 43%;  /* Ajusta esta propiedad para subir las imágenes */
-                transform: translateY(-50%); 
-                width: 400px; 
-                z-index: 0; 
-            }
-    
-            .image-wrapper.left {
-                left: -300px; /* Acercar a la tabla */
-            }
-    
-            .image-wrapper.right {
-                right: -300px; /* Acercar a la tabla */
-            }
-        </style>
     </head>
     <header>
         <div class="header">
@@ -119,9 +33,6 @@
                             </li>
                         </ul>
                     </div>
-                    <a class="navbar-brand" href="#">
-                        <img src="image/logopromo.png" alt="Logo" class="logo-img" />
-                    </a>
                 </nav>  
             </div>
         </div>  
@@ -133,8 +44,8 @@
                 <table>
                     <tr>
                         <td>
-                            <label for="titular">Titular:</label>
-                            <select id="titular" name="titular" required>
+                            <label for="titular">Titular:</label><br>
+                            <select id="titular" name="titular" class="input-gral" required>
                                 <option value="" disabled selected>Selecciona el titular</option>
                                 <option value="natural">Persona Natural</option>
                                 <option value="juridica">Persona Jurídica</option>
@@ -142,38 +53,45 @@
                         </td>
                     </tr>
                 </table>
-    
                 <!-- Contenedor para Persona Natural -->
                 <div id="personaNatural" style="display: none;">
                     <table>
                         <tr>
                             <td>
                                 <label for="Abonado">Código de Abonado:</label>
-                                <input type="text" id="Abonado" name="Abonado" required pattern="\d+" oninput="limitToNumbers(this)">
+                                <input type="text" id="Abonado" name="Abonado" class="input-gral" required pattern="\d+" oninput="limitToNumbers(this)">
                             </td>
                             <td>
-                                <label for="documento">Número de Documento:</label>
-                                <input type="text" id="documento" name="documento" maxlength="8" required pattern="\d{8}" oninput="limitToNumbers(this)">
+                                <label for="dni">DNI:</label><br>
+                                <input type="text" id="dni" name="dni" maxlength="8" class="input-gral" required pattern="\d{8}" oninput="limitToNumbers(this)">
                             </td>
                         </tr>                        
                         <tr>
                             <td>
                                 <label for="apellidop">Apellido Paterno:</label>
-                                <input type="text" id="apellidop" name="apellidop">
+                                <input type="text" id="apellidop" name="apellidop" class="input-gral">
                             </td>
                             <td>
                                 <label for="apellidom">Apellido Materno:</label>
-                                <input type="text" id="apellidom" name="apellidom">
+                                <input type="text" id="apellidom" name="apellidom" class="input-gral">
                             </td>
                             <td>
                                 <label for="nombres">Nombres:</label>
-                                <input type="text" id="nombres" name="nombres">
+                                <input type="text" id="nombres" name="nombres" class="input-gral">
                             </td>
                         </tr>
                         <tr>
                             <td>
+                                <label for="correo">Correo Electrónico:</label>
+                                <input type="email" id="correo" name="correo" class="input-gral" required placeholder="ejemplo@dominio.com">
+                            </td>                            
+                            <td>
+                                <label for="telefono">Número de telefono:</label>
+                                <input type="text" id="telefono" name="telefono" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
+                            </td>
+                            <td>
                                 <label for="fechaNacimiento">Fecha de nacimiento:</label>
-                                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                                <input type="date" id="fechaNacimiento" name="fechaNacimiento" class="input-gral" required>
                             </td>                                                      
                         </tr>
                     </table>
@@ -184,14 +102,76 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="nombreEmpresa">Nombre de la Empresa:</label>
-                                <input type="text" id="nombreEmpresa" name="nombreEmpresa">
+                                <label for="Abonado">Código de Abonado:</label><br>
+                                <input type="text" id="Abonado" name="Abonado" class="input-gral" required pattern="\d+" oninput="limitToNumbers(this)">
                             </td>
+                            <td>
+                                <label for="ruc">RUC:</label><br>
+                                <input type="text" id="ruc" name="ruc" maxlength="11" class="input-gral" required pattern="\d{11}" oninput="limitToNumbers(this)">
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="nombreEmpresa">Nombre de la Empresa:</label><br>
+                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="input-largo">
+                            </td>                            
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="correoemp">Correo Electrónico:</label><br>
+                                <input type="email" id="correoemp" name="correoemp" class="input-gral" required placeholder="ejemplo@dominio.com">
+                            </td>                            
+                            <td>
+                                <label for="telefonoemp">Número de telefono:</label><br>
+                                <input type="text" id="telefonoemp" name="telefonoemp" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
+                            </td>
+                            <td>
+                                &nbsp;
+                            </td>                                                      
+                        </tr>
+                    </table>
+                    <h1 style="text-align: left;">Representante Legal</h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="apellidoprep">Apellido Paterno:</label>
+                                <input type="text" id="apellidoprep" name="apellidoprep" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="apellidomrep">Apellido Materno:</label>
+                                <input type="text" id="apellidomrep" name="apellidomrep" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="nombresrep">Nombres:</label>
+                                <input type="text" id="nombresrep" name="nombresrep" class="input-gral">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="dnirep">DNI Representante:</label><br>
+                                <input type="text" id="dnirep" name="dnirep" maxlength="8" class="input-gral" required pattern="\d{8}" oninput="limitToNumbers(this)">
+                            </td>                            
+                            <td>
+                                <label for="telefono">Número de telefono:</label><br>
+                                <input type="text" id="telefono" name="telefono" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
+                            </td>
+                            <td>
+                                <label for="cargo">Cargo:</label><br>
+                                <input type="text" id="cargo" name="cargo" class="input-gral">
+                            </td>                                                     
                         </tr>
                     </table>
                 </div>
     
-                <button type="submit">Enviar</button>
+                <button type="submit" class="btn-registrar">Registrar</button>
+                
             </form>
         </div>
     

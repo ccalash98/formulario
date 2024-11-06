@@ -24,3 +24,6 @@ function limitInputLength(element, maxLength) {
         element.value = element.value.slice(0, maxLength);
     }
 }
+function limitToNumbers(element) {
+    element.value = element.value.replace(/\D/g, ''); // Reemplaza cualquier carácter que no sea un dígito
+}

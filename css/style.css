@@ -2298,6 +2298,46 @@ ul.img_icon li {
      padding-left: 0;  /* Quitar el padding izquierdo */
      margin-left: -0;   /* Quitar el margen izquierdo */
  } 
+ .input-largo {
+     width: 700px; /* Ajusta el tamaño según tus necesidades */
+     padding: 8px;         /* Agrega espacio interno para mejorar la presentación */
+     text-align: left;     /* Alinea el texto dentro del campo a la izquierda */
+     border-radius: 5px;   /* Opcional: redondea los bordes del campo */
+     border: 1px solid #ccc; /* Opcional: define el borde del campo */
+ }
+ .input-gral {
+     width: 300px;         /* Ajusta el ancho según tus necesidades */
+     padding: 8px;         /* Agrega espacio interno para mejorar la presentación */
+     text-align: left;     /* Alinea el texto dentro del campo a la izquierda */
+     border-radius: 5px;   /* Opcional: redondea los bordes del campo */
+     border: 1px solid #ccc; /* Opcional: define el borde del campo */
+ }
+ tbody td {
+     text-align: left;
+     padding: 8px; /* Agrega algo de espacio interno si es necesario */
+     font-size: 100%;
+ }
+ .btn-registrar {
+     background-color: #4CAF50; /* Color de fondo verde */
+     color: white;              /* Color del texto */
+     padding: 12px 24px;        /* Espaciado interno */
+     font-size: 16px;           /* Tamaño del texto */
+     font-weight: bold;         /* Texto en negrita */
+     border: none;              /* Sin bordes */
+     border-radius: 8px;        /* Bordes redondeados */
+     cursor: pointer;           /* Cambia el cursor al pasar sobre el botón */
+     transition: background-color 0.3s ease, transform 0.2s ease; /* Transición para hover */
+ }
+ 
+ .btn-registrar:hover {
+     background-color: #45a049; /* Cambia de color al pasar el cursor */
+     transform: scale(1.05);    /* Efecto de "crecer" al pasar el cursor */
+ }
+ 
+ .btn-registrar:active {
+     transform: scale(0.98);    /* Efecto de "presión" al hacer clic */
+ }
+ 
  
 
 
