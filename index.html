@@ -126,9 +126,9 @@
             </div>
         </div>  
     </header>
+    <br><br><br><br>
     <body>
         <div class="container">
-            <h1>Registro de Usuario</h1>
             <form id="registroForm">
                 <table>
                     <tr>
@@ -148,13 +148,33 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="apellidos">Apellidos:</label>
-                                <input type="text" id="apellidos" name="apellidos">
+                                <label for="Abonado">Código de Abonado:</label>
+                                <input type="text" id="Abonado" name="Abonado" required pattern="\d+" oninput="limitToNumbers(this)">
+                            </td>
+                            <td>
+                                <label for="documento">Número de Documento:</label>
+                                <input type="text" id="documento" name="documento" maxlength="8" required pattern="\d{8}" oninput="limitToNumbers(this)">
+                            </td>
+                        </tr>                        
+                        <tr>
+                            <td>
+                                <label for="apellidop">Apellido Paterno:</label>
+                                <input type="text" id="apellidop" name="apellidop">
+                            </td>
+                            <td>
+                                <label for="apellidom">Apellido Materno:</label>
+                                <input type="text" id="apellidom" name="apellidom">
                             </td>
                             <td>
                                 <label for="nombres">Nombres:</label>
                                 <input type="text" id="nombres" name="nombres">
                             </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="fechaNacimiento">Fecha de nacimiento:</label>
+                                <input type="date" id="fechaNacimiento" name="fechaNacimiento" required>
+                            </td>                                                      
                         </tr>
                     </table>
                 </div>
