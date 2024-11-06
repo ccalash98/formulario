@@ -118,15 +118,15 @@
                             <td>
                                 <label for="nombreEmpresa">Nombre de la Empresa:</label><br>
                                 <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="input-largo">
-                            </td>                            
-                        </tr>
-                    </table>
-                    <table>
-                        <tr>
+                            </td>
                             <td>
                                 <label for="correoemp">Correo Electrónico:</label><br>
                                 <input type="email" id="correoemp" name="correoemp" class="input-gral" required placeholder="ejemplo@dominio.com">
                             </td>                            
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>                           
                             <td>
                                 <label for="telefonoemp">Número de telefono:</label><br>
                                 <input type="text" id="telefonoemp" name="telefonoemp" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
@@ -204,11 +204,11 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="tarifa">Tarifa:</label><br>
-                                <input type="text" id="tarifa" name="tarifa" class="input-gral">
+                                <label for="tarifan">Tarifa Nueva:</label><br>
+                                <input type="text" id="tarifan" name="tarifan" class="input-gral">
                             </td>
                             <td>
-                                <label for="plan">Plan:</label><br>
+                                <label for="plan">Plan Nuevo:</label><br>
                                 <input type="text" id="plan" name="plan" class="input-gral">
                             </td>
                             <td>
@@ -226,10 +226,16 @@
                         </tr>
                     </table>
                 </div>
-                <button type="submit" class="btn-registrar">Registrar</button>
+                <form id="registroForm">
+                    <!-- Campos de entrada aquí -->
+                    <button type="submit" class="btn-registrar">Registrar</button>
+                </form>
+                
             </form>
         </div>
     
         <script src="js/scripts.js"></script>
+        <script src="js/registro.js"></script>
+
     </body>
 </html>
