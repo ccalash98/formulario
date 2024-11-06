@@ -2337,7 +2337,26 @@ ul.img_icon li {
  .btn-registrar:active {
      transform: scale(0.98);    /* Efecto de "presión" al hacer clic */
  }
+
  
+ /* Estilo de todos los contenedores que se mostrarán con animación */
+.show {
+    display: block;
+    opacity: 1;
+    animation: slideDown 1s ease-out; /* Aumentamos la duración de la animación a 1 segundo */
+}
+/* Animación para deslizamiento hacia abajo */
+@keyframes slideDown {
+    0% {
+        transform: translateY(-30px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
  
 
 

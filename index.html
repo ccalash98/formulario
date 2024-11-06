@@ -38,7 +38,7 @@
         </div>  
     </header>
     <br><br><br><br>
-    <body>
+    <body class="left-align">
         <div class="container">
             <form id="registroForm">
                 <table>
@@ -96,7 +96,6 @@
                         </tr>
                     </table>
                 </div>
-    
                 <!-- Contenedor para Persona Jurídica -->
                 <div id="personaJuridica" style="display: none;">
                     <table>
@@ -168,10 +167,66 @@
                             </td>                                                     
                         </tr>
                     </table>
+                </div>                
+                <div id="servicios" style="display: none;">
+                    <h1 style="text-align: left;">Datos del Servicio</h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="nroco">Nro Contrato:</label><br>
+                                <input type="text" id="nroco" name="nroco" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="tarifa">Tarifa:</label><br>
+                                <input type="text" id="tarifa" name="tarifa" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="plan">Plan:</label><br>
+                                <input type="text" id="plan" name="plan" class="input-gral">
+                            </td>
+                        </tr>
+                    </table>
+                    <table>
+                        <tr>
+                            <td>                                
+                                <label for="direccion">Direccion:</label><br>
+                                <input type="text" id="direccion" name="direccion" class="input-largo">
+                            </td>
+                            <td>                                
+                                <label for="nro">Nro de Casa:</label><br>
+                                <input type="text" id="nro" name="nro" class="input-gral">
+                            </td>
+                        </tr>
+                    </table>
+                </div>                
+                <div id="solicitud" style="display: none;">
+                    <h1 style="text-align: left;">Solicitud</h1>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="tarifa">Tarifa:</label><br>
+                                <input type="text" id="tarifa" name="tarifa" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="plan">Plan:</label><br>
+                                <input type="text" id="plan" name="plan" class="input-gral">
+                            </td>
+                            <td>
+                                <label for="titular">Tipo de Operacion:</label><br>
+                                <select id="operacion" name="operacion" class="input-gral" required>
+                                    <option value="" disabled selected>Selecciona el titular</option>
+                                    <option value="reinstalacion">reinstalacion</option>
+                                    <option value="renovacion">renovacion</option>
+                                </select>
+                            </td>
+                            <td>
+                                <label for="inicioservicio">Inicio de Servicio:</label>
+                                <input type="date" id="inicioservicio" name="inicioservicio" class="input-gral" required>
+                            </td>
+                        </tr>
+                    </table>
                 </div>
-    
                 <button type="submit" class="btn-registrar">Registrar</button>
-                
             </form>
         </div>
     
