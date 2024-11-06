@@ -2338,7 +2338,7 @@ ul.img_icon li {
      transform: scale(0.98);    /* Efecto de "presión" al hacer clic */
  }
 
- 
+
  /* Estilo de todos los contenedores que se mostrarán con animación */
 .show {
     display: block;
@@ -2355,6 +2355,10 @@ ul.img_icon li {
         transform: translateY(0);
         opacity: 1;
     }
+}
+/* Estilo para campos con error */
+.input-error {
+    border: 2px solid red;
 }
 
  

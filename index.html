@@ -7,8 +7,7 @@
         <title>Formulario</title>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/responsive.css">
-        <link rel="icon" href="image/fevicon.png" type="image/gif" />  
+        <link rel="stylesheet" href="css/responsive.css"> 
         <link rel="icon" href="./image/logo_mini.png" sizes="32x32" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
@@ -101,12 +100,12 @@
                     <table>
                         <tr>
                             <td>
-                                <label for="Abonado">Código de Abonado:</label><br>
-                                <input type="text" id="Abonado" name="Abonado" class="input-gral" required pattern="\d+" oninput="limitToNumbers(this)">
+                                <label for="codco">Código de Abonado:</label><br>
+                                <input type="text" id="codco" name="codco" class="input-gral" required pattern="\d+" oninput="limitToNumbers(this)">
                             </td>
                             <td>
                                 <label for="ruc">RUC:</label><br>
-                                <input type="text" id="ruc" name="ruc" maxlength="11" class="input-gral" required pattern="\d{11}" oninput="limitToNumbers(this)">
+                                <input type="text" id="ruc" name="ruc" maxlength="11" class="input-gral"  pattern="\d{11}" oninput="limitToNumbers(this)">
                             </td>
                             <td>
                                 &nbsp;
@@ -117,7 +116,7 @@
                         <tr>
                             <td>
                                 <label for="nombreEmpresa">Nombre de la Empresa:</label><br>
-                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="input-largo">
+                                <input type="text" id="nombreEmpresa" name="nombreEmpresa" class="input-largo" required>
                             </td>
                             <td>
                                 <label for="correoemp">Correo Electrónico:</label><br>
@@ -141,15 +140,15 @@
                         <tr>
                             <td>
                                 <label for="apellidoprep">Apellido Paterno:</label>
-                                <input type="text" id="apellidoprep" name="apellidoprep" class="input-gral">
+                                <input type="text" id="apellidoprep" name="apellidoprep" class="input-gral" required>
                             </td>
                             <td>
                                 <label for="apellidomrep">Apellido Materno:</label>
-                                <input type="text" id="apellidomrep" name="apellidomrep" class="input-gral">
+                                <input type="text" id="apellidomrep" name="apellidomrep" class="input-gral" required>
                             </td>
                             <td>
                                 <label for="nombresrep">Nombres:</label>
-                                <input type="text" id="nombresrep" name="nombresrep" class="input-gral">
+                                <input type="text" id="nombresrep" name="nombresrep" class="input-gral" required>
                             </td>
                         </tr>
                         <tr>
@@ -158,12 +157,12 @@
                                 <input type="text" id="dnirep" name="dnirep" maxlength="8" class="input-gral" required pattern="\d{8}" oninput="limitToNumbers(this)">
                             </td>                            
                             <td>
-                                <label for="telefono">Número de telefono:</label><br>
-                                <input type="text" id="telefono" name="telefono" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
+                                <label for="telefonorep">Número de telefono:</label><br>
+                                <input type="text" id="telefonorep" name="telefonorep" maxlength="9" class="input-gral" required pattern="\d{9}" oninput="limitToNumbers(this)">
                             </td>
                             <td>
                                 <label for="cargo">Cargo:</label><br>
-                                <input type="text" id="cargo" name="cargo" class="input-gral">
+                                <input type="text" id="cargo" name="cargo" class="input-gral" required>
                             </td>                                                     
                         </tr>
                     </table>
@@ -208,8 +207,8 @@
                                 <input type="text" id="tarifan" name="tarifan" class="input-gral">
                             </td>
                             <td>
-                                <label for="plan">Plan Nuevo:</label><br>
-                                <input type="text" id="plan" name="plan" class="input-gral">
+                                <label for="plann">Plan Nuevo:</label><br>
+                                <input type="text" id="plann" name="plann" class="input-gral">
                             </td>
                             <td>
                                 <label for="titular">Tipo de Operacion:</label><br>
@@ -226,16 +225,11 @@
                         </tr>
                     </table>
                 </div>
-                <form id="registroForm">
-                    <!-- Campos de entrada aquí -->
-                    <button type="submit" class="btn-registrar">Registrar</button>
-                </form>
-                
+                <button type="submit" class="btn-registrar">Registrar</button>
             </form>
         </div>
-    
         <script src="js/scripts.js"></script>
         <script src="js/registro.js"></script>
-
+        <script src="https://apis.google.com/js/api.js"></script>
     </body>
 </html>
