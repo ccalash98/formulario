@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
         return new Promise((resolve, reject) => {
         gapi.load('auth2', function () {
             gapi.auth2.init({
-            client_id: '',  // Usa tu propio Client ID de la consola de desarrolladores
+            client_id: '583127738904-gag8ebredmrlbhaelu6epj51dd2hitho.apps.googleusercontent.com',  // Usa tu propio Client ID de la consola de desarrolladores
             }).then(function () {
             const authInstance = gapi.auth2.getAuthInstance();
             authInstance.signIn({ scope: "https://www.googleapis.com/auth/spreadsheets" })
