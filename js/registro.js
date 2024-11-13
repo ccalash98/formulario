@@ -45,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Cargar la librería de API de Google Sheets
     function loadClient() {
-      gapi.client.setApiKey('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');  // Pon tu API Key aquí
+      gapi.client.setApiKey('');  // Pon tu API Key aquí
       return gapi.client.load("https://content.googleapis.com/discovery/v1/apis/sheets/v4/rest")
         .then(function () {
           console.log("GAPI client loaded for API");
